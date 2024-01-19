@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:latest
+    container_name: mypostgrescontainer
+    environment:
+      POSTGRES_DB: mydatabase
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+    ports:
+      - "5432:5432"
+    networks:
+      - mynetwork
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: mypgadmincontainer
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:9090"
+    networks:
+      - mynetwork
+    depends_on:
+      - postgres
+
+networks:
+  mynetwork:

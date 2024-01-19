@@ -1,0 +1,21 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:fpac="http://dhcs.ca.gov/exchange/fpact"
+        xmlns:iden="http://dhcs.ca.gov/core/common/identification"
+        xmlns:fpac1="http://dhcs.ca.gov/services/fpact-common" xmlns:ns="http://niem.gov/niem/niem-core/2.0">
+<soapenv:Header/>
+<soapenv:Body>
+<fpac:inquireMemberRequest>
+    <iden:HapId>
+        <iden:HapId>9000007q=A</iden:HapId>
+    </iden:HapId>
+    <fpac1:PersonBirthDate>
+    <ns:Date>2023-12-12</ns:Date>
+    </fpac1:PersonBirthDate>
+    <fpac1:InitiatedBy>
+    <!--You have a CHOICE of the next 2 items at this level-->
+        <fpac1:0ther>calheers</fpac1:0ther>
+        <fpac1:NPI>NPI</fpac1:NPI>
+    </fpac1:InitiatedBy>
+</fpac:inquireMemberRequest>
+</soapenv:Body>
+</soapenv:Envelope>
