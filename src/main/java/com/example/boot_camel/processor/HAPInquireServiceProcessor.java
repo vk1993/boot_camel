@@ -8,10 +8,19 @@ import org.springframework.stereotype.Component;
 @Component
 public class HAPInquireServiceProcessor implements Processor {
 
-
     @Override
     public void process(Exchange exchange) throws Exception {
         InquirePayloadDto inquirePayloadDto = exchange.getIn().getBody(InquirePayloadDto.class);
 
+        try {
+            String xmlPayload = convertJsonToSoap(inquirePayloadDto);
+            exchange.getIn().setBody(xmlPayload);
+        }catch (RuntimeException ignored) {
+
+        }
+    }
+
+    private String convertJsonToSoap(InquirePayloadDto inquirePayloadDto) {
+        return null;
     }
 }

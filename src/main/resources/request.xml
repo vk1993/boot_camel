@@ -13,9 +13,11 @@
     </fpac1:PersonBirthDate>
     <fpac1:InitiatedBy>
     <!--You have a CHOICE of the next 2 items at this level-->
-        <fpac1:0ther>calheers</fpac1:0ther>
+        <fpac1:other>calheers</fpac1:other>
         <fpac1:NPI>NPI</fpac1:NPI>
     </fpac1:InitiatedBy>
 </fpac:inquireMemberRequest>
 </soapenv:Body>
 </soapenv:Envelope>
+
+

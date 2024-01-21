@@ -1,0 +1,10 @@
+CREATE TABLE HAP_SERVICE_REQUEST (
+    requestId bigint PRIMARY KEY,
+    INQUIRE_REQUEST VARCHAR(255)
+);
+
+CREATE TABLE bootcamel.HAP_INTERFACE_LOGS (
+    requestId BIGINT PRIMARY KEY,
+    serviceRequest TEXT,
+    FOREIGN KEY (requestId) REFERENCES bootcamel.HAP_SERVICE_REQUEST(requestId)
+);

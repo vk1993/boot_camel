@@ -1,4 +1,12 @@
 package com.example.boot_camel.route;
 
-public class HAPResponseDBRoute {
+import org.apache.camel.builder.RouteBuilder;
+
+public class HAPResponseDBRoute extends RouteBuilder {
+
+
+    @Override
+    public void configure() throws Exception {
+
+    }
 }

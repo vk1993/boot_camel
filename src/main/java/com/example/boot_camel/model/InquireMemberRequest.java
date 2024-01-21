@@ -8,13 +8,9 @@ import lombok.Data;
 
 @AllArgsConstructor
 @Data
-@XmlRootElement(name = "inquireMemberRequest")
 public class InquireMemberRequest {
-    @XmlElement(name = "HapId")
     private HapId hapId;
-    @XmlElement(name = "PersonBirthDate")
     private PersonBirthDate personBirthDate;
-    @XmlElement(name="InitiatedBy")
     private InitiatedBy initiatedBy;
 
     // getters and setters

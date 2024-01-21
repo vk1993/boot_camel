@@ -4,15 +4,24 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 
 @Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class HAPServiceRequest {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long requestId;
-    
+    private Long Id;
+
+    private Long requestID;
     private String soapMessage;
-    private String jsonPayload;
-    // other fields and getters/setters as needed
+
+    public HAPServiceRequest(Long requestId, String requestBody) {
+    }
 }
