@@ -6,7 +6,7 @@ import jakarta.xml.bind.annotation.XmlRootElement;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-@AllArgsConstructor
+
 @Data
 public class InquireMemberRequest {
     private HapId hapId;
